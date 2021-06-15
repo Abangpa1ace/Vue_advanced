@@ -3,11 +3,13 @@ import VueRouter from 'vue-router'
 import NewsView from '../views/NewsView.vue'
 import JobsView from '../views/JobsView.vue'
 import AskView from '../views/AskView.vue'
-
+import UserView from '../views/UserView.vue'
+import DetailView from '../views/DetailView.vue'
 
 Vue.use(VueRouter);
 
 const router = new VueRouter({
+  mode: "history",
   routes: [
     {
       path: '/',
@@ -25,14 +27,14 @@ const router = new VueRouter({
       path: '/ask',
       component: AskView
     },
-    // {
-    //   path: '',
-    //   component: '',
-    // },
-    // {
-    //   path: '',
-    //   component: '',
-    // },
+    {
+      path: '/user',
+      component: UserView,
+    },
+    {
+      path: 'detail',
+      component: DetailView,
+    },
   ]
 })
 

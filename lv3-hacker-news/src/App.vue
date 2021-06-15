@@ -10,9 +10,18 @@ import Header from './components/Header';
 export default {
   components: {
     Header,
-  },
+  }
 }
 </script>
 
-<style scoped>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
 </style>
