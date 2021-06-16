@@ -1,24 +1,23 @@
 <template>
   <div>
-    view
+    <div 
+      v-for="news in this.$store.state.news"
+      :key="news.title">
+      {{ news.title }}
+    </div>
   </div>
 </template>
 
 <script>
-
-import { fetchNewsList } from '../api'
-
 export default {
-    name: 'NewsView',
+  name: 'NewsView',
   data() {
     return {
-      newsList: [],
+
     }
   },
   created() {
-    fetchNewsList()
-      .then(res => this.newsList = res.data)
-      .catch(err => console.log(err))
+    this.$store.dispatch('fetchNewsList')
   }
 }
 </script>

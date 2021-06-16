@@ -1,7 +1,7 @@
 <template>
   <div>
     <div 
-      v-for="ask in askList"
+      v-for="ask in this.$store.state.asks"
       :key="ask.title">
       {{ ask.title }}
     </div>
@@ -9,19 +9,16 @@
 </template>
 
 <script>
-import { fetchAskList } from '../api';
 
 export default {
   name: 'AskView',
   data() {
     return {
-      askList: [],
+
     }
   } ,
   created() {
-    fetchAskList()
-      .then(res => this.askList = res.data)
-      .catch(err => console.log(err))
+    this.$store.dispatch('fetchAskList')
   },
 }
 </script>

@@ -11,16 +11,16 @@ const getApiBy = (path) => {
   return `${config.baseUrl}${path}/1.json`;
 }
 
-const fetchNewsList = () => {
+const reqNewsList = () => {
   return axios.get(getApiBy('news'))
 } 
 
-const fetchJobsList = () => {
+const reqJobsList = () => {
   return axios.get(getApiBy('jobs'))
 }
 
-const fetchAskList = () => {
+const reqAskList = () => {
   return axios.get(getApiBy('ask'))
 }
 
-export { fetchNewsList, fetchJobsList, fetchAskList };
+export { reqNewsList, reqJobsList, reqAskList };

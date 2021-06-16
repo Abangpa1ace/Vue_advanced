@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { fetchJobsList } from '../api';
+
 
 export default {
   data() {
@@ -14,9 +14,7 @@ export default {
     }
   } ,
   created() {
-    fetchJobsList()
-      .then(res => this.jobsList = res.data)
-      .catch(err => console.log(err))
+
   },
 }
 </script>
