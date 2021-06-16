@@ -9,6 +9,7 @@
 import { fetchNewsList } from '../api'
 
 export default {
+    name: 'NewsView',
   data() {
     return {
       newsList: [],

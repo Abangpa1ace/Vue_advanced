@@ -12,6 +12,7 @@
 import { fetchAskList } from '../api';
 
 export default {
+  name: 'AskView',
   data() {
     return {
       askList: [],
@@ -21,7 +22,6 @@ export default {
     fetchAskList()
       .then(res => this.askList = res.data)
       .catch(err => console.log(err))
-      .then(console.log(askList))
   },
 }
 </script>

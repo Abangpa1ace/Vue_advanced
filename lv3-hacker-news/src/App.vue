@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header></Header>
-    <router-view></router-view>
+    <router-view class="main"></router-view>
   </div> 
 </template>
 
@@ -24,4 +24,9 @@ a {
   color: black;
   text-decoration: none;
 }
+
+.main {
+  padding: 20px;
+}
+
 </style>
