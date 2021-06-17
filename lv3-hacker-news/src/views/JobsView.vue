@@ -1,21 +1,26 @@
 <template>
   <div>
-    jobs
+    <div
+      v-for="job in this.jobs"
+      :key="job.title">
+      {{ job.title }}
+    </div>
   </div>
 </template>
 
 <script>
-
+import { mapState, mapActions} from 'vuex';
 
 export default {
-  data() {
-    return {
-      jobsList: [],
-    }
-  } ,
-  created() {
-
+  computed: {
+    ...mapState(['jobs'])
   },
+  methods: {
+    ...mapActions(['fetchJobsList'])
+  },
+  created() {
+    this.fetchJobsList()
+  }
 }
 </script>
 
