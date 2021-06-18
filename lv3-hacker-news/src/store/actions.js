@@ -1,16 +1,21 @@
-import { reqAskList, reqJobsList } from '../api';
+import { reqNewsList, reqAskList, reqJobsList } from '../api';
 
-const fetchAskList = (context) => {
-  console.log('asking~')
-  reqAskList()
-    .then(res => context.commit('setAskList', res.data))
+const fetchNewsList = ({ commit }) => {
+  reqNewsList()
+  .then(({ data }) => commit('setNewsList', data))
     .catch(err => console.log(err))
 }
 
-const fetchJobsList = (context) => {
+const fetchAskList = ({ commit }) => {
+  reqAskList()
+  .then(({ data }) => commit('setAskList', data))
+    .catch(err => console.log(err))
+}
+
+const fetchJobsList = ({ commit }) => {
   reqJobsList()
-  .then(res => context.commit('setJobsList', res.data))
+  .then(({ data }) => commit('setJobsList', data))
   .catch(err => console.log(err))
 }
 
-export { fetchAskList, fetchJobsList }
+export { fetchNewsList, fetchAskList, fetchJobsList }
