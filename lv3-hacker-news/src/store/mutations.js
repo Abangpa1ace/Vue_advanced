@@ -10,4 +10,8 @@ const setJobsList = (state, data) => {
   state.jobs = data;
 }
 
-export { setNewsList, setAskList, setJobsList }
+const setUserDetail = (state, info) => {
+  state.user  = info;
+}
+
+export { setNewsList, setAskList, setJobsList, setUserDetail }

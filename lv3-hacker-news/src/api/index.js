@@ -3,24 +3,31 @@ import axios from 'axios'
 // HTTP Request & Response 관련설정
 const config = {
   baseUrl: 'https://api.hnpwa.com/v0/',
-
 }
 
 // API 함수들을 정리
-const getApiBy = (path) => {
+const getListBy = (path) => {
   return `${config.baseUrl}${path}/1.json`;
 }
 
+const getDetailBy = (path, id) => {
+  return `${config.baseUrl}${path}/${id}.json`;
+}
+
 const reqNewsList = () => {
-  return axios.get(getApiBy('news'))
+  return axios.get(getListBy('news'))
 } 
 
 const reqJobsList = () => {
-  return axios.get(getApiBy('jobs'))
+  return axios.get(getListBy('jobs'))
 }
 
 const reqAskList = () => {
-  return axios.get(getApiBy('ask'))
+  return axios.get(getListBy('ask'))
 }
 
-export { reqNewsList, reqJobsList, reqAskList };
+const reqUserDetail = (name) => {
+  return axios.get(getDetailBy('user', name))
+}
+
+export { reqNewsList, reqJobsList, reqAskList, reqUserDetail };

@@ -1,11 +1,12 @@
 <template>
-  <div>
-    <div
-      v-for="job in this.jobs"
+  <ul>
+    <li
+      v-for="job in jobs"
       :key="job.title">
-      {{ job.title }}
-    </div>
-  </div>
+      <p><a :href="job.url" target="blank">{{ job.title }}</a></p>
+      <small>{{ job.domain }}</small>
+    </li>
+  </ul>
 </template>
 
 <script>

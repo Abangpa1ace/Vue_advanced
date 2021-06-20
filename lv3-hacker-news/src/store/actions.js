@@ -1,4 +1,4 @@
-import { reqNewsList, reqAskList, reqJobsList } from '../api';
+import { reqNewsList, reqAskList, reqJobsList,  reqUserDetail } from '../api';
 
 const fetchNewsList = ({ commit }) => {
   reqNewsList()
@@ -18,4 +18,10 @@ const fetchJobsList = ({ commit }) => {
   .catch(err => console.log(err))
 }
 
-export { fetchNewsList, fetchAskList, fetchJobsList }
+const fetchUserDetail = ({ commit }, name) => {
+  reqUserDetail(name)
+    .then(({ data }) => commit('setUserDetail', data))
+    .catch(err => console.log(err))
+}
+
+export { fetchNewsList, fetchAskList, fetchJobsList, fetchUserDetail }

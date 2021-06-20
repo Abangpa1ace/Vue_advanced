@@ -15,18 +15,6 @@ export default {
 </script>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-}
-
-.main {
-  padding: 20px;
-}
+@import "./style/App.css";
 
 </style>

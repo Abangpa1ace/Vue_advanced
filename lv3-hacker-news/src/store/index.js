@@ -10,6 +10,7 @@ const store = new Vuex.Store({
     news: [],
     asks: [],
     jobs: [],
+    user: {},
   },
   mutations,
   actions,

@@ -28,7 +28,7 @@ const router = new VueRouter({
       component: AskView
     },
     {
-      path: '/user',
+      path: '/user/:id',
       component: UserView,
     },
     {
