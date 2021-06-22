@@ -1,26 +1,15 @@
 <template>
-  <div>
-    <div 
-      v-for="ask in asks"
-      :key="ask.title">
-      <router-link :to="`/item/${ask.id}`">{{ ask.title }}</router-link>
-    </div>
-  </div>
+<main>
+  <list-item></list-item>
+</main>
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
+import ListItem from '../components/ListItem';
 
 export default {
-  name: 'AskView',
-  computed: {
-    ...mapState(['asks'])
-  },
-  methods: {
-    ...mapActions(['fetchAskList'])
-  },
-  created() {
-    this.fetchAskList();
+  components: {
+    ListItem,
   }
 }
 </script>

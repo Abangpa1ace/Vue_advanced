@@ -1,26 +1,15 @@
 <template>
-  <ul>
-    <li
-      v-for="job in jobs"
-      :key="job.title">
-      <p><a :href="job.url" target="blank">{{ job.title }}</a></p>
-      <small>{{ job.domain }}</small>
-    </li>
-  </ul>
+<main>
+  <list-item></list-item>
+</main>
 </template>
 
 <script>
-import { mapState, mapActions} from 'vuex';
+import ListItem from '../components/ListItem';
 
 export default {
-  computed: {
-    ...mapState(['jobs'])
-  },
-  methods: {
-    ...mapActions(['fetchJobsList'])
-  },
-  created() {
-    this.fetchJobsList()
+  components: {
+    ListItem,
   }
 }
 </script>

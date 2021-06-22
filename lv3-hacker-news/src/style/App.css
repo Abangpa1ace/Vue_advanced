@@ -19,8 +19,3 @@ ul, li {
 small, small a {
   color: #7c7c7c;
 }
-
-.userlink:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
