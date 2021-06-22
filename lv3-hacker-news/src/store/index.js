@@ -11,6 +11,7 @@ const store = new Vuex.Store({
     asks: [],
     jobs: [],
     user: {},
+    item: {},
   },
   mutations,
   actions,

@@ -14,4 +14,8 @@ const setUserDetail = (state, info) => {
   state.user  = info;
 }
 
-export { setNewsList, setAskList, setJobsList, setUserDetail }
+const setItemDetail = (state, info) => {
+  state.item = info;
+}
+
+export { setNewsList, setAskList, setJobsList, setUserDetail, setItemDetail }

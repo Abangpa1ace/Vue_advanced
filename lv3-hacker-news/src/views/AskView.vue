@@ -3,7 +3,7 @@
     <div 
       v-for="ask in asks"
       :key="ask.title">
-      {{ ask.title }}
+      <router-link :to="`/item/${ask.id}`">{{ ask.title }}</router-link>
     </div>
   </div>
 </template>

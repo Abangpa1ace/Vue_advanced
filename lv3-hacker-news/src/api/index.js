@@ -30,4 +30,8 @@ const reqUserDetail = (name) => {
   return axios.get(getDetailBy('user', name))
 }
 
-export { reqNewsList, reqJobsList, reqAskList, reqUserDetail };
+const reqItemDetail = (id) => {
+  return axios.get(getDetailBy('item', id))
+}
+
+export { reqNewsList, reqJobsList, reqAskList, reqUserDetail, reqItemDetail };

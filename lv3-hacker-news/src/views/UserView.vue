@@ -1,6 +1,9 @@
 <template>
   <div>
-    user
+    <p>name: {{ this.user.id }}</p>
+    <p>created: {{ this.user.created }}</p>
+    <p>karma: {{ this.user.karma }}</p>
+    <p>about: {{ this.user.about }}</p>
   </div>
 </template>
 
